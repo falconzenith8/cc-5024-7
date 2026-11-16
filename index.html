@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>展品纹理图集工作室 | Exhibit Atlas Studio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2357d9c1'/%3E%3Cg fill='%2306201d'%3E%3Crect x='6' y='6' width='9' height='12' rx='1'/%3E%3Crect x='18' y='6' width='8' height='7' rx='1'/%3E%3Crect x='6' y='21' width='7' height='5' rx='1'/%3E%3Crect x='16' y='16' width='10' height='10' rx='1'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./src/ui/app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="mark">EA</span>
+      <div>
+        <h1>展品纹理图集工作室</h1>
+        <p>逐块 mip · 边缘扩色 · 旋转 UV · 真实三维采样检查</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <div class="stat" title="守护式图集，含逐块 mip">
+        <span class="stat-label">图集纹理</span>
+        <strong id="stat-bytes">—</strong>
+        <em id="stat-budget">—</em>
+      </div>
+      <div class="stat">
+        <span class="stat-label">页 / 安全 LOD</span>
+        <strong id="stat-pages">—</strong>
+        <em id="stat-lod">—</em>
+      </div>
+      <div class="stat">
+        <span class="stat-label">图块</span>
+        <strong id="stat-tiles">—</strong>
+        <em id="stat-rotated">—</em>
+      </div>
+      <button id="btn-rebuild" class="btn primary">重新构建图集</button>
+      <button id="btn-export" class="btn">导出纹理包</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel left">
+      <section>
+        <div class="section-head">
+          <h2>来源图块</h2>
+          <span class="hint">点击预览缩小结果</span>
+        </div>
+        <div id="tile-list" class="tile-list" aria-label="来源图块列表"></div>
+        <div class="row gap">
+          <button id="btn-add" class="btn small">添加 PNG…</button>
+          <input id="file-input" type="file" accept="image/png,image/webp,image/jpeg" multiple hidden />
+          <button id="btn-reset" class="btn small ghost">恢复示例素材</button>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>构建参数</h2>
+        </div>
+        <div class="controls">
+          <label>边缘扩展 padding
+            <select id="opt-padding">
+              <option value="8">8 px</option>
+              <option value="16" selected>16 px</option>
+              <option value="24">24 px</option>
+              <option value="32">32 px</option>
+            </select>
+          </label>
+          <label>单页上限
+            <select id="opt-pagelimit">
+              <option value="640">640 px</option>
+              <option value="1024" selected>1024 px</option>
+              <option value="2048">2048 px</option>
+              <option value="4096">4096 px</option>
+            </select>
+          </label>
+          <label>纹理预算
+            <select id="opt-budget">
+              <option value="4">4 MiB</option>
+              <option value="16" selected>16 MiB</option>
+              <option value="32">32 MiB</option>
+              <option value="64">64 MiB</option>
+            </select>
+          </label>
+          <label class="check">
+            <input id="opt-rotate" type="checkbox" checked />
+            允许 90° 旋转打包
+          </label>
+        </div>
+        <div class="row gap">
+          <button id="btn-try-split" class="btn small ghost" title="用 640px 页上限强制拆分，验证不缩小图块">演示拆分</button>
+          <span class="hint" id="build-note"></span>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>图集层级</h2>
+          <span class="hint">逐块生成，非整页滤波</span>
+        </div>
+        <div id="level-strip" class="level-strip" role="tablist" aria-label="mip 层级"></div>
+        <canvas id="atlas-canvas" class="atlas-canvas" width="512" height="512" aria-label="图集预览"></canvas>
+        <div class="atlas-legend">
+          <span><i class="swatch core"></i>核心区</span>
+          <span><i class="swatch bleed"></i>边缘扩展</span>
+          <span><i class="swatch pad"></i>共享留白</span>
+        </div>
+        <div id="atlas-note" class="hint"></div>
+        <div id="page-tabs" class="page-tabs"></div>
+      </section>
+    </aside>
+
+    <section class="panel center">
+      <div class="viewport-head">
+        <div class="seg" role="group" aria-label="采样视图">
+          <button data-mode="0" class="seg-btn active">守护图集</button>
+          <button data-mode="1" class="seg-btn">整页滤波（反例）</button>
+          <button data-mode="2" class="seg-btn">污染差分</button>
+        </div>
+        <div class="seg" role="group" aria-label="观察距离">
+          <button id="lod-auto" class="seg-btn active">自动 LOD</button>
+          <button data-lod="0" class="seg-btn">L0</button>
+          <button data-lod="1" class="seg-btn">L1</button>
+          <button data-lod="2" class="seg-btn">L2</button>
+          <button data-lod="3" class="seg-btn">L3</button>
+          <button data-lod="4" class="seg-btn">L4</button>
+        </div>
+        <label class="check compact"><input id="opt-alpha" type="checkbox" /> Alpha 视图</label>
+        <label class="check compact"><input id="opt-bounds" type="checkbox" checked /> 图块边界</label>
+        <button id="btn-reset-view" class="btn small ghost">重置视角</button>
+      </div>
+      <div class="viewport-wrap">
+        <canvas id="gl-canvas" class="gl-canvas"></canvas>
+        <div class="viewport-overlay">
+          <span id="probe-readout" class="probe-readout">拖拽旋转 · 滚轮缩放；切换 LOD 观察图集邻区</span>
+          <span class="scale-note">真实透视平面 · CLAMP_TO_EDGE · 逐块 mip</span>
+        </div>
+      </div>
+      <div class="viewport-foot">
+        <div class="bias">
+          <label for="opt-bias">Mip 偏置 <output id="bias-out">0.0</output></label>
+          <input id="opt-bias" type="range" min="-1" max="5" step="0.1" value="0" />
+        </div>
+        <div class="wall-note">拖近看细节，拖远看 mip；“整页滤波（反例）”显示邻展品颜色渗入。</div>
+      </div>
+    </section>
+
+    <aside class="panel right">
+      <section>
+        <div class="section-head">
+          <h2>选中图块</h2>
+          <span class="hint" id="sel-id">—</span>
+        </div>
+        <div class="source-compare">
+          <figure>
+            <canvas id="source-canvas" width="256" height="256"></canvas>
+            <figcaption>来源（棋盘透明）</figcaption>
+          </figure>
+          <figure>
+            <canvas id="preview-canvas" width="256" height="256"></canvas>
+            <figcaption id="preview-caption">图集采样（缩小）</figcaption>
+          </figure>
+        </div>
+        <div class="mini-controls">
+          <label>预览层级 <output id="preview-level-out">L0</output>
+            <input id="preview-level" type="range" min="0" max="4" step="1" value="0" />
+          </label>
+          <label>邻域放大
+            <select id="preview-zoom">
+              <option value="1" selected>1×</option>
+              <option value="2">2×</option>
+              <option value="4">4×</option>
+            </select>
+          </label>
+        </div>
+        <table class="kv" id="tile-meta"></table>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>邻区 / 采样污染</h2>
+          <span class="hint">真实像素对比</span>
+        </div>
+        <canvas id="splice-canvas" class="splice-canvas" width="560" height="258" aria-label="图集邻区拼接检查"></canvas>
+        <div class="splice-legend">
+          <span><i class="swatch guarded"></i>逐块 mip</span>
+          <span><i class="swatch naive"></i>整页滤波</span>
+          <span><i class="swatch diff"></i>差异</span>
+        </div>
+        <div class="edge-head" id="edge-title">边界剖面 · 跨核心边缘逐点双线性采样</div>
+        <canvas id="edge-canvas" class="edge-canvas" width="520" height="150" aria-label="边界采样剖面"></canvas>
+        <div class="edge-legend">
+          <span>行 1：逐块 mip（边缘扩色）</span>
+          <span>行 2：整页滤波（邻展品渗入）</span>
+          <span>细条：alpha</span>
+        </div>
+        <div id="contam-table" class="contam-table"></div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>诊断输出</h2>
+        </div>
+        <div id="diag-list" class="diag-list"></div>
+        <div class="row gap">
+          <button id="btn-download-manifest" class="btn small ghost">下载 manifest</button>
+          <button id="btn-download-diag" class="btn small ghost">下载诊断</button>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="error-dialog" class="error-dialog">
+    <h2>图集构建已停止</h2>
+    <p id="error-message"></p>
+    <pre id="error-details"></pre>
+    <form method="dialog">
+      <button class="btn primary">知道了</button>
+    </form>
+  </dialog>
+
+  <script type="module" src="./src/ui/main.mjs"></script>
+</body>
+</html>
