@@ -48,7 +48,12 @@
         <div class="row gap">
           <button id="btn-add" class="btn small">添加 PNG…</button>
           <input id="file-input" type="file" accept="image/png,image/webp,image/jpeg" multiple hidden />
+          <button id="btn-load-pack" class="btn small primary">载入示范素材包</button>
           <button id="btn-reset" class="btn small ghost">恢复示例素材</button>
+        </div>
+        <div id="pack-status" class="pack-status" role="status" aria-live="polite">
+          <span class="pack-status-dot" id="pack-status-dot"></span>
+          <span id="pack-status-text">未载入素材包 · 当前为内置示例</span>
         </div>
       </section>
 
@@ -60,6 +65,7 @@
           <label>边缘扩展 padding
             <select id="opt-padding">
               <option value="8">8 px</option>
+              <option value="12">12 px（示范包）</option>
               <option value="16" selected>16 px</option>
               <option value="24">24 px</option>
               <option value="32">32 px</option>
@@ -180,6 +186,7 @@
           <h2>邻区 / 采样污染</h2>
           <span class="hint">真实像素对比</span>
         </div>
+        <div id="anomaly-banner" class="anomaly-banner" hidden></div>
         <canvas id="splice-canvas" class="splice-canvas" width="560" height="258" aria-label="图集邻区拼接检查"></canvas>
         <div class="splice-legend">
           <span><i class="swatch guarded"></i>逐块 mip</span>

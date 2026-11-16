@@ -1,0 +1,90 @@
+{
+  "packId": "demo-pack",
+  "packVersion": 1,
+  "generator": "scripts/build-demo-pack.mjs",
+  "sourceGenerator": "scripts/generate-cases.mjs",
+  "padding": 12,
+  "pageLimit": 1024,
+  "budgetMiB": 16,
+  "budgetBytes": 16777216,
+  "allowRotation": true,
+  "mode": "guarded",
+  "minPage": 128,
+  "maxLevel": 10,
+  "contaminationThreshold": 8,
+  "farLevels": [
+    0,
+    2
+  ],
+  "scene": {
+    "nearCanvas": [
+      768,
+      768
+    ],
+    "farCanvas": [
+      256,
+      256
+    ],
+    "checkerCell": 10,
+    "description": "近景渲染 L0 全尺寸墙；远景渲染 L2 缩小墙，用于肉眼判断串色"
+  },
+  "sha256": "b007c9dbb1d5b5b02f6be17ecbf3605170ee5ec0728857238d62055b71f33367",
+  "sources": [
+    {
+      "id": "abut-blocks",
+      "file": "abut-blocks.png",
+      "width": 192,
+      "height": 192,
+      "sha256": "9e048547c0766ac3ab06e58288a673ba56bb4e28e812008909f7dbd2544a2a77",
+      "probe": "紧邻高对比色块与内部 1px 接缝"
+    },
+    {
+      "id": "hairline",
+      "file": "hairline.png",
+      "width": 128,
+      "height": 256,
+      "sha256": "59f05b48e6500321c108841cf1b91f7518a8d767516b23308d34b2681b353406",
+      "probe": "不透明主体内透明 1px 竖缝与透明外沿"
+    },
+    {
+      "id": "ribbon",
+      "file": "ribbon.png",
+      "width": 320,
+      "height": 96,
+      "sha256": "c55b68ffbc5f023409318272c03bd384635afdd5e67823720054e42346a5d20a",
+      "probe": "3.3:1 超宽长宽比，颜色延伸到最后一个像素"
+    },
+    {
+      "id": "pole",
+      "file": "pole.png",
+      "width": 48,
+      "height": 240,
+      "sha256": "1dfcca1d0fa3c5d1dc502e486449e662665a7628e571d2fe4b75746320270497",
+      "probe": "1:5 细长长宽比，长边透明缺口"
+    },
+    {
+      "id": "ring",
+      "file": "ring.png",
+      "width": 144,
+      "height": 144,
+      "sha256": "8f09a1eeae7f627a1b3218686717fd39d465df91aaf58c2cdff69e2023389ea5",
+      "probe": "饱和圆盘内的透明细环，检验透明区扩色来源"
+    },
+    {
+      "id": "chip",
+      "file": "chip.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "ba467e30812faf3a9d1b6f480b843aef7271f5c7d43c15b50911fbd2094a765a",
+      "probe": "最小图块与 1px 描边，压测深层 mip 下限"
+    },
+    {
+      "id": "letterbox",
+      "file": "letterbox.png",
+      "width": 224,
+      "height": 128,
+      "sha256": "817713cc12b228e142d8743ecc7e305de1bae8d9fc014a3f7b587328773e6345",
+      "probe": "四周 1px 透明信箱边与对角透明切线"
+    }
+  ]
+}

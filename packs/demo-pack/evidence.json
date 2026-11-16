@@ -1,0 +1,4691 @@
+{
+  "packId": "demo-pack",
+  "generatedAt": "2026-11-16T14:35:24.328Z",
+  "threshold": 8,
+  "contaminationLevel": 2,
+  "safeLod": 3,
+  "summary": {
+    "tiles": 7,
+    "guardedPages": 1,
+    "guardedLevels": 4,
+    "tilesWithNaiveContamination": 7,
+    "totalContaminatedEdgeProbes": 74,
+    "failedSampledColorProbes": 0,
+    "interiorOpaqueProbes": 15
+  },
+  "mipEdges": [
+    {
+      "id": "abut-blocks",
+      "probe": "abut-blocks.png",
+      "safeLod": 3,
+      "worstOutsideDelta": 213,
+      "contaminatedProbes": 9,
+      "totalProbes": 12,
+      "levels": [
+        {
+          "level": 0,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 0,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "outsideDelta": 0,
+              "naiveContaminated": false
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 0,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "outsideDelta": 0,
+              "naiveContaminated": false
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 0,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "outsideDelta": 0,
+              "naiveContaminated": false
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 1,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                125,
+                21,
+                29,
+                255
+              ],
+              "naiveInside": [
+                125,
+                21,
+                29,
+                255
+              ],
+              "outsideDelta": 113,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 1,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                68,
+                18,
+                26,
+                255
+              ],
+              "naiveInside": [
+                68,
+                18,
+                26,
+                255
+              ],
+              "outsideDelta": 56,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 1,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                134,
+                122,
+                11,
+                255
+              ],
+              "naiveInside": [
+                134,
+                122,
+                11,
+                255
+              ],
+              "outsideDelta": 122,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 2,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                181,
+                25,
+                33,
+                255
+              ],
+              "naiveInside": [
+                181,
+                25,
+                33,
+                255
+              ],
+              "outsideDelta": 169,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 2,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                139,
+                22,
+                30,
+                255
+              ],
+              "naiveInside": [
+                139,
+                22,
+                30,
+                255
+              ],
+              "outsideDelta": 127,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 2,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                194,
+                176,
+                6,
+                255
+              ],
+              "naiveInside": [
+                194,
+                176,
+                6,
+                255
+              ],
+              "outsideDelta": 182,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 3,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                209,
+                26,
+                34,
+                255
+              ],
+              "naiveInside": [
+                209,
+                26,
+                34,
+                255
+              ],
+              "outsideDelta": 197,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 3,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                184,
+                25,
+                33,
+                255
+              ],
+              "naiveInside": [
+                184,
+                25,
+                33,
+                255
+              ],
+              "outsideDelta": 172,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 3,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                225,
+                203,
+                3,
+                255
+              ],
+              "naiveInside": [
+                225,
+                203,
+                3,
+                255
+              ],
+              "outsideDelta": 213,
+              "naiveContaminated": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hairline",
+      "probe": "hairline.png",
+      "safeLod": 3,
+      "worstOutsideDelta": 223,
+      "contaminatedProbes": 9,
+      "totalProbes": 12,
+      "levels": [
+        {
+          "level": 0,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 0,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "naiveInside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "outsideDelta": 0,
+              "naiveContaminated": false
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 0,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "naiveInside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "outsideDelta": 0,
+              "naiveContaminated": false
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 0,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "naiveInside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "outsideDelta": 0,
+              "naiveContaminated": false
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 1,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                128
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                128
+              ],
+              "outsideDelta": 128,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 1,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                128
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                128
+              ],
+              "outsideDelta": 128,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 1,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                128
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                128
+              ],
+              "outsideDelta": 128,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 2,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                191
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                191
+              ],
+              "outsideDelta": 191,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 2,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                191
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                191
+              ],
+              "outsideDelta": 191,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 2,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                191
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                191
+              ],
+              "outsideDelta": 191,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                223
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                223
+              ],
+              "outsideDelta": 223,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                223
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                223
+              ],
+              "outsideDelta": 223,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "guardedInside": [
+                0,
+                200,
+                90,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                223
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                223
+              ],
+              "outsideDelta": 223,
+              "naiveContaminated": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ribbon",
+      "probe": "ribbon.png",
+      "safeLod": 3,
+      "worstOutsideDelta": 186,
+      "contaminatedProbes": 12,
+      "totalProbes": 12,
+      "levels": [
+        {
+          "level": 0,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 0,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                255
+              ],
+              "naiveInside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "outsideDelta": 186,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 0,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                255
+              ],
+              "naiveInside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "outsideDelta": 186,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 0,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                255
+              ],
+              "naiveInside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "outsideDelta": 186,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 1,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                255
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                128
+              ],
+              "outsideDelta": 186,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 1,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                255
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                128
+              ],
+              "outsideDelta": 186,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 1,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                255
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                128
+              ],
+              "outsideDelta": 186,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 2,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                255
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                191
+              ],
+              "outsideDelta": 186,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 2,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                255
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                191
+              ],
+              "outsideDelta": 186,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 2,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                200,
+                90,
+                255
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                191
+              ],
+              "outsideDelta": 186,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 3,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                8,
+                60,
+                30,
+                255
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                223
+              ],
+              "outsideDelta": 46,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 3,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                8,
+                60,
+                30,
+                255
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                223
+              ],
+              "outsideDelta": 46,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 3,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                8,
+                60,
+                30,
+                255
+              ],
+              "naiveInside": [
+                0,
+                200,
+                90,
+                223
+              ],
+              "outsideDelta": 46,
+              "naiveContaminated": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pole",
+      "probe": "pole.png",
+      "safeLod": 3,
+      "worstOutsideDelta": 255,
+      "contaminatedProbes": 12,
+      "totalProbes": 12,
+      "levels": [
+        {
+          "level": 0,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 0,
+              "guardedOutside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 0,
+              "guardedOutside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                20,
+                40,
+                220,
+                255
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "outsideDelta": 235,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 0,
+              "guardedOutside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                230,
+                0,
+                255
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 1,
+              "guardedOutside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                6,
+                122,
+                139,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 1,
+              "guardedOutside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                20,
+                40,
+                220,
+                255
+              ],
+              "naiveInside": [
+                16,
+                27,
+                121,
+                255
+              ],
+              "outsideDelta": 235,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 1,
+              "guardedOutside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                230,
+                0,
+                255
+              ],
+              "naiveInside": [
+                134,
+                122,
+                11,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 2,
+              "guardedOutside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                3,
+                175,
+                197,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 2,
+              "guardedOutside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                20,
+                40,
+                220,
+                255
+              ],
+              "naiveInside": [
+                18,
+                34,
+                171,
+                255
+              ],
+              "outsideDelta": 235,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 2,
+              "guardedOutside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                230,
+                0,
+                255
+              ],
+              "naiveInside": [
+                194,
+                176,
+                6,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                2,
+                202,
+                226,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                20,
+                40,
+                220,
+                255
+              ],
+              "naiveInside": [
+                19,
+                37,
+                195,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "guardedInside": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                230,
+                0,
+                255
+              ],
+              "naiveInside": [
+                225,
+                203,
+                3,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ring",
+      "probe": "ring.png",
+      "safeLod": 3,
+      "worstOutsideDelta": 255,
+      "contaminatedProbes": 11,
+      "totalProbes": 12,
+      "levels": [
+        {
+          "level": 0,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 0,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "naiveInside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 0,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "outsideDelta": 243,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 0,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "outsideDelta": 243,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 1,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                12,
+                14,
+                22,
+                0
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                0
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 1,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveInside": [
+                134,
+                7,
+                101,
+                255
+              ],
+              "outsideDelta": 243,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 1,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveInside": [
+                134,
+                7,
+                101,
+                255
+              ],
+              "outsideDelta": 243,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 2,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                12,
+                14,
+                22,
+                0
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                0
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 2,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveInside": [
+                194,
+                4,
+                141,
+                255
+              ],
+              "outsideDelta": 243,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 2,
+              "guardedOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveInside": [
+                194,
+                4,
+                141,
+                255
+              ],
+              "outsideDelta": 243,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                12,
+                14,
+                22,
+                0
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                0
+              ],
+              "outsideDelta": 0,
+              "naiveContaminated": false
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                225,
+                2,
+                160,
+                255
+              ],
+              "naiveInside": [
+                198,
+                3,
+                143,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "guardedInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveInside": [
+                225,
+                2,
+                160,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chip",
+      "probe": "chip.png",
+      "safeLod": 3,
+      "worstOutsideDelta": 255,
+      "contaminatedProbes": 9,
+      "totalProbes": 12,
+      "levels": [
+        {
+          "level": 0,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 0,
+              "guardedOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "outsideDelta": 0,
+              "naiveContaminated": false
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 0,
+              "guardedOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "outsideDelta": 0,
+              "naiveContaminated": false
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 0,
+              "guardedOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "outsideDelta": 0,
+              "naiveContaminated": false
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 1,
+              "guardedOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                128,
+                218,
+                255
+              ],
+              "naiveInside": [
+                255,
+                128,
+                218,
+                255
+              ],
+              "outsideDelta": 128,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 1,
+              "guardedOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                134,
+                7,
+                101,
+                255
+              ],
+              "naiveInside": [
+                134,
+                7,
+                101,
+                255
+              ],
+              "outsideDelta": 121,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 1,
+              "guardedOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                128,
+                218,
+                255
+              ],
+              "naiveInside": [
+                255,
+                128,
+                218,
+                255
+              ],
+              "outsideDelta": 128,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 2,
+              "guardedOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                191,
+                236,
+                255
+              ],
+              "naiveInside": [
+                255,
+                191,
+                236,
+                255
+              ],
+              "outsideDelta": 191,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 2,
+              "guardedOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                73,
+                11,
+                62,
+                255
+              ],
+              "naiveInside": [
+                73,
+                11,
+                62,
+                255
+              ],
+              "outsideDelta": 182,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 2,
+              "guardedOutside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                255,
+                191,
+                236,
+                255
+              ],
+              "naiveInside": [
+                255,
+                191,
+                236,
+                255
+              ],
+              "outsideDelta": 191,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                191,
+                217,
+                246,
+                255
+              ],
+              "naiveInside": [
+                191,
+                217,
+                246,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                39,
+                66,
+                100,
+                255
+              ],
+              "naiveInside": [
+                39,
+                66,
+                100,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 3,
+              "guardedOutside": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "guardedInside": [
+                255,
+                0,
+                180,
+                255
+              ],
+              "naiveOutside": [
+                191,
+                217,
+                246,
+                255
+              ],
+              "naiveInside": [
+                191,
+                217,
+                246,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "letterbox",
+      "probe": "letterbox.png",
+      "safeLod": 3,
+      "worstOutsideDelta": 255,
+      "contaminatedProbes": 12,
+      "totalProbes": 12,
+      "levels": [
+        {
+          "level": 0,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 0,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 0,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 0,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "naiveInside": [
+                12,
+                14,
+                22,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 1,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                6,
+                122,
+                139,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 1,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                6,
+                122,
+                139,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 1,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                6,
+                122,
+                139,
+                255
+              ],
+              "naiveInside": [
+                9,
+                68,
+                80,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 2,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                3,
+                175,
+                197,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 2,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                3,
+                175,
+                197,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 2,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                3,
+                175,
+                197,
+                255
+              ],
+              "naiveInside": [
+                5,
+                135,
+                153,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "samples": [
+            {
+              "edge": "left",
+              "fy": 0.25,
+              "level": 3,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                2,
+                202,
+                226,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.5,
+              "level": 3,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                0,
+                229,
+                255,
+                255
+              ],
+              "naiveInside": [
+                2,
+                202,
+                226,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            },
+            {
+              "edge": "left",
+              "fy": 0.75,
+              "level": 3,
+              "guardedOutside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "guardedInside": [
+                40,
+                24,
+                80,
+                0
+              ],
+              "naiveOutside": [
+                2,
+                202,
+                226,
+                255
+              ],
+              "naiveInside": [
+                3,
+                179,
+                200,
+                255
+              ],
+              "outsideDelta": 255,
+              "naiveContaminated": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sampledColors": [
+    {
+      "id": "abut-blocks",
+      "probes": [
+        {
+          "name": "center",
+          "level": 0,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            14,
+            21,
+            72,
+            255
+          ],
+          "ownPatchReference": [
+            14,
+            21,
+            72,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 0,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            237,
+            28,
+            36,
+            255
+          ],
+          "ownPatchReference": [
+            237,
+            28,
+            36,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 0,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "ownPatchReference": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 1,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            57,
+            76,
+            99,
+            255
+          ],
+          "ownPatchReference": [
+            57,
+            76,
+            99,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 1,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            237,
+            28,
+            36,
+            255
+          ],
+          "ownPatchReference": [
+            237,
+            28,
+            36,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 1,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "ownPatchReference": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 2,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            89,
+            103,
+            113,
+            255
+          ],
+          "ownPatchReference": [
+            89,
+            103,
+            113,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 2,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            237,
+            28,
+            36,
+            255
+          ],
+          "ownPatchReference": [
+            237,
+            28,
+            36,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 2,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "ownPatchReference": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "hairline",
+      "probes": [
+        {
+          "name": "center",
+          "level": 0,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            8,
+            60,
+            30,
+            128
+          ],
+          "ownPatchReference": [
+            8,
+            60,
+            30,
+            128
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 0,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "ownPatchReference": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 0,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "ownPatchReference": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 1,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            8,
+            60,
+            30,
+            192
+          ],
+          "ownPatchReference": [
+            8,
+            60,
+            30,
+            192
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 1,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "ownPatchReference": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 1,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "ownPatchReference": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 2,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            8,
+            60,
+            30,
+            223
+          ],
+          "ownPatchReference": [
+            8,
+            60,
+            30,
+            223
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 2,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "ownPatchReference": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 2,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "ownPatchReference": [
+            8,
+            60,
+            30,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "ribbon",
+      "probes": [
+        {
+          "name": "center",
+          "level": 0,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            255,
+            255,
+            255,
+            255
+          ],
+          "ownPatchReference": [
+            255,
+            255,
+            255,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 0,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.88,
+            0.12
+          ],
+          "sampled": [
+            255,
+            0,
+            180,
+            255
+          ],
+          "ownPatchReference": [
+            255,
+            0,
+            180,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 0,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.12,
+            0.88
+          ],
+          "sampled": [
+            255,
+            230,
+            0,
+            255
+          ],
+          "ownPatchReference": [
+            255,
+            230,
+            0,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 1,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            192,
+            249,
+            255,
+            255
+          ],
+          "ownPatchReference": [
+            192,
+            249,
+            255,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 1,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.88,
+            0.12
+          ],
+          "sampled": [
+            255,
+            0,
+            180,
+            255
+          ],
+          "ownPatchReference": [
+            255,
+            0,
+            180,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 1,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.12,
+            0.88
+          ],
+          "sampled": [
+            255,
+            230,
+            0,
+            255
+          ],
+          "ownPatchReference": [
+            255,
+            230,
+            0,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 2,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            96,
+            239,
+            255,
+            255
+          ],
+          "ownPatchReference": [
+            96,
+            239,
+            255,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 2,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.88,
+            0.12
+          ],
+          "sampled": [
+            255,
+            0,
+            180,
+            255
+          ],
+          "ownPatchReference": [
+            255,
+            0,
+            180,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 2,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.12,
+            0.88
+          ],
+          "sampled": [
+            255,
+            230,
+            0,
+            255
+          ],
+          "ownPatchReference": [
+            255,
+            230,
+            0,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "pole",
+      "probes": [
+        {
+          "name": "center",
+          "level": 0,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            60,
+            24,
+            0,
+            255
+          ],
+          "ownPatchReference": [
+            60,
+            24,
+            0,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 0,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            255,
+            130,
+            0,
+            255
+          ],
+          "ownPatchReference": [
+            255,
+            130,
+            0,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 0,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            255,
+            130,
+            0,
+            0
+          ],
+          "ownPatchReference": [
+            255,
+            130,
+            0,
+            0
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 1,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            60,
+            24,
+            0,
+            255
+          ],
+          "ownPatchReference": [
+            60,
+            24,
+            0,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 1,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            255,
+            130,
+            0,
+            255
+          ],
+          "ownPatchReference": [
+            255,
+            130,
+            0,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 1,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            255,
+            130,
+            0,
+            0
+          ],
+          "ownPatchReference": [
+            255,
+            130,
+            0,
+            0
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 2,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            60,
+            24,
+            0,
+            255
+          ],
+          "ownPatchReference": [
+            60,
+            24,
+            0,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 2,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            255,
+            132,
+            4,
+            250
+          ],
+          "ownPatchReference": [
+            255,
+            132,
+            4,
+            250
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 2,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            255,
+            138,
+            15,
+            17
+          ],
+          "ownPatchReference": [
+            255,
+            138,
+            15,
+            17
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "ring",
+      "probes": [
+        {
+          "name": "center",
+          "level": 0,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "ownPatchReference": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 0,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            237,
+            28,
+            36,
+            0
+          ],
+          "ownPatchReference": [
+            237,
+            28,
+            36,
+            0
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 0,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            237,
+            28,
+            36,
+            0
+          ],
+          "ownPatchReference": [
+            237,
+            28,
+            36,
+            0
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 1,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "ownPatchReference": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 1,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            237,
+            28,
+            36,
+            0
+          ],
+          "ownPatchReference": [
+            237,
+            28,
+            36,
+            0
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 1,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            237,
+            28,
+            36,
+            0
+          ],
+          "ownPatchReference": [
+            237,
+            28,
+            36,
+            0
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 2,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "ownPatchReference": [
+            20,
+            40,
+            220,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 2,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            163,
+            23,
+            31,
+            0
+          ],
+          "ownPatchReference": [
+            163,
+            23,
+            31,
+            0
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 2,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            230,
+            28,
+            36,
+            0
+          ],
+          "ownPatchReference": [
+            230,
+            28,
+            36,
+            0
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "chip",
+      "probes": [
+        {
+          "name": "center",
+          "level": 0,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "ownPatchReference": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 0,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "ownPatchReference": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 0,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "ownPatchReference": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 1,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "ownPatchReference": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 1,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "ownPatchReference": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 1,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "ownPatchReference": [
+            0,
+            229,
+            255,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 2,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            1,
+            182,
+            204,
+            255
+          ],
+          "ownPatchReference": [
+            1,
+            182,
+            204,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": true,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 2,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            127,
+            242,
+            255,
+            255
+          ],
+          "ownPatchReference": [
+            127,
+            242,
+            255,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 2,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            127,
+            242,
+            255,
+            255
+          ],
+          "ownPatchReference": [
+            127,
+            242,
+            255,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "letterbox",
+      "probes": [
+        {
+          "name": "center",
+          "level": 0,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            12,
+            14,
+            22,
+            64
+          ],
+          "ownPatchReference": [
+            12,
+            14,
+            22,
+            64
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 0,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "ownPatchReference": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 0,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "ownPatchReference": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 1,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            16,
+            16,
+            30,
+            112
+          ],
+          "ownPatchReference": [
+            16,
+            16,
+            30,
+            112
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 1,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "ownPatchReference": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 1,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "ownPatchReference": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "center",
+          "level": 2,
+          "uv": [
+            0.5,
+            0.5
+          ],
+          "rotatedUv": [
+            0.5,
+            0.5
+          ],
+          "sampled": [
+            24,
+            19,
+            48,
+            175
+          ],
+          "ownPatchReference": [
+            24,
+            19,
+            48,
+            175
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-tl",
+          "level": 2,
+          "uv": [
+            0.12,
+            0.12
+          ],
+          "rotatedUv": [
+            0.12,
+            0.12
+          ],
+          "sampled": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "ownPatchReference": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        },
+        {
+          "name": "border-br",
+          "level": 2,
+          "uv": [
+            0.88,
+            0.88
+          ],
+          "rotatedUv": [
+            0.88,
+            0.88
+          ],
+          "sampled": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "ownPatchReference": [
+            40,
+            24,
+            80,
+            255
+          ],
+          "rgbDelta": 0,
+          "alphaDelta": 0,
+          "interiorOpaque": false,
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "contamination": [
+    {
+      "id": "abut-blocks",
+      "maxRgb": 222,
+      "maxAlpha": 223,
+      "meanRgb": 66.027,
+      "contaminatedProbes": 24,
+      "total": 49
+    },
+    {
+      "id": "chip",
+      "maxRgb": 118,
+      "maxAlpha": 255,
+      "meanRgb": 104.827,
+      "contaminatedProbes": 49,
+      "total": 49
+    },
+    {
+      "id": "hairline",
+      "maxRgb": 118,
+      "maxAlpha": 255,
+      "meanRgb": 56.735,
+      "contaminatedProbes": 28,
+      "total": 49
+    },
+    {
+      "id": "letterbox",
+      "maxRgb": 0,
+      "maxAlpha": 0,
+      "meanRgb": 0,
+      "contaminatedProbes": 0,
+      "total": 49
+    },
+    {
+      "id": "pole",
+      "maxRgb": 0,
+      "maxAlpha": 0,
+      "meanRgb": 0,
+      "contaminatedProbes": 0,
+      "total": 49
+    },
+    {
+      "id": "ribbon",
+      "maxRgb": 0,
+      "maxAlpha": 0,
+      "meanRgb": 0,
+      "contaminatedProbes": 0,
+      "total": 49
+    },
+    {
+      "id": "ring",
+      "maxRgb": 0,
+      "maxAlpha": 0,
+      "meanRgb": 0,
+      "contaminatedProbes": 0,
+      "total": 49
+    }
+  ]
+}

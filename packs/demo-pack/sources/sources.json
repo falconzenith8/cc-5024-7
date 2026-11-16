@@ -1,0 +1,103 @@
+{
+  "generator": "scripts/generate-cases.mjs",
+  "deterministic": true,
+  "seed": "fixed-primaries-v1",
+  "palette": {
+    "INK": [
+      12,
+      14,
+      22
+    ],
+    "RED": [
+      237,
+      28,
+      36
+    ],
+    "CYAN": [
+      0,
+      229,
+      255
+    ],
+    "YELLOW": [
+      255,
+      230,
+      0
+    ],
+    "BLUE": [
+      20,
+      40,
+      220
+    ],
+    "GREEN": [
+      0,
+      200,
+      90
+    ],
+    "MAGENTA": [
+      255,
+      0,
+      180
+    ],
+    "ORANGE": [
+      255,
+      130,
+      0
+    ],
+    "WHITE": [
+      255,
+      255,
+      255
+    ]
+  },
+  "recipes": [
+    {
+      "id": "abut-blocks",
+      "file": "abut-blocks.png",
+      "width": 192,
+      "height": 192,
+      "probe": "紧邻高对比色块与内部 1px 接缝"
+    },
+    {
+      "id": "hairline",
+      "file": "hairline.png",
+      "width": 128,
+      "height": 256,
+      "probe": "不透明主体内透明 1px 竖缝与透明外沿"
+    },
+    {
+      "id": "ribbon",
+      "file": "ribbon.png",
+      "width": 320,
+      "height": 96,
+      "probe": "3.3:1 超宽长宽比，颜色延伸到最后一个像素"
+    },
+    {
+      "id": "pole",
+      "file": "pole.png",
+      "width": 48,
+      "height": 240,
+      "probe": "1:5 细长长宽比，长边透明缺口"
+    },
+    {
+      "id": "ring",
+      "file": "ring.png",
+      "width": 144,
+      "height": 144,
+      "probe": "饱和圆盘内的透明细环，检验透明区扩色来源"
+    },
+    {
+      "id": "chip",
+      "file": "chip.png",
+      "width": 64,
+      "height": 64,
+      "probe": "最小图块与 1px 描边，压测深层 mip 下限"
+    },
+    {
+      "id": "letterbox",
+      "file": "letterbox.png",
+      "width": 224,
+      "height": 128,
+      "probe": "四周 1px 透明信箱边与对角透明切线"
+    }
+  ]
+}

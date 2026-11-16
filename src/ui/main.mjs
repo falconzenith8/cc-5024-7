@@ -6,6 +6,14 @@ import { createZip } from './zip.mjs';
 import { WallRenderer } from './renderer.mjs';
 
 const SAMPLE_SOURCES = ['poster', 'banner', 'stamp', 'placard', 'plate', 'label'];
+// Committed demo pack (packs/demo-pack). The studio loads its sources and
+// saved parameters through the same build path as any user import.
+const DEMO_PACK = {
+  id: 'demo-pack',
+  base: './packs/demo-pack',
+  sources: ['abut-blocks', 'hairline', 'ribbon', 'pole', 'ring', 'chip', 'letterbox'],
+  paramsFile: 'pack-params.json',
+};
 const state = {
   items: [],
   atlas: null,
@@ -19,6 +27,8 @@ const state = {
   previewZoom: 1,
   options: { padding: 16, pageLimit: 1024, budgetBytes: 16 * 1048576, allowRotation: true },
   pageIndex: 0,
+  activePack: null,
+  buildState: 'idle',
 };
 
 const $ = (sel) => document.querySelector(sel);
@@ -58,6 +68,116 @@ async function loadSampleItems() {
     items.push({ id, name: `${id}.png`, image: img });
   }
   return items;
+}
+
+// Load the committed demo pack: its saved parameters are applied to the build
+// options (never silently replaced by defaults), and the run-status strip plus
+// anomaly banner are updated from the resulting diagnostics.
+async function loadDemoPack() {
+  const statusEl = $('#pack-status');
+  const statusText = $('#pack-status-text');
+  statusEl.className = 'pack-status';
+  statusText.textContent = `正在载入素材包 ${DEMO_PACK.id}…`;
+  state.buildState = 'loading';
+  try {
+    const paramsRes = await fetch(`${DEMO_PACK.base}/${DEMO_PACK.paramsFile}`, { cache: 'no-store' });
+    if (!paramsRes.ok) throw new Error(`无法读取 ${DEMO_PACK.paramsFile}（${paramsRes.status}）`);
+    const params = await paramsRes.json();
+    const required = ['padding', 'pageLimit', 'budgetBytes', 'allowRotation', 'mode', 'minPage', 'maxLevel'];
+    for (const key of required) {
+      if (params[key] === undefined) throw new Error(`素材包参数缺少 ${key}，已停止载入（不使用默认值代替）`);
+    }
+    const items = [];
+    for (const id of DEMO_PACK.sources) {
+      const res = await fetch(`${DEMO_PACK.base}/sources/${id}.png`, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`无法加载素材包来源 ${id}.png（${res.status}）`);
+      const img = await decodePng(await res.blob());
+      items.push({ id, name: `${id}.png`, image: img });
+    }
+    state.items = items;
+    state.activePack = {
+      id: params.packId ?? DEMO_PACK.id,
+      padding: params.padding,
+      pageLimit: params.pageLimit,
+      budgetBytes: params.budgetBytes,
+      allowRotation: params.allowRotation,
+      sourceCount: params.sources?.length ?? items.length,
+    };
+    state.options = {
+      padding: params.padding,
+      pageLimit: params.pageLimit,
+      budgetBytes: params.budgetBytes,
+      allowRotation: params.allowRotation,
+    };
+    syncOptionControls();
+    state.selectedId = items[0].id;
+    await rebuild({ silent: true });
+    state.buildState = 'pack';
+    renderPackStatus();
+    toast(`已载入素材包 ${state.activePack.id}：${items.length} 个图块，padding ${params.padding}px`);
+  } catch (err) {
+    state.buildState = 'error';
+    renderPackStatus(err.message);
+    toast(`素材包载入失败：${err.message}`, true);
+  }
+}
+
+function syncOptionControls() {
+  $('#opt-padding').value = String(state.options.padding);
+  $('#opt-pagelimit').value = String(state.options.pageLimit);
+  $('#opt-budget').value = String(Math.round(state.options.budgetBytes / 1048576));
+  $('#opt-rotate').checked = state.options.allowRotation;
+}
+
+function renderPackStatus(errorMessage = null) {
+  const el = $('#pack-status');
+  const text = $('#pack-status-text');
+  if (errorMessage || state.buildState === 'error') {
+    el.className = 'pack-status error';
+    text.textContent = `素材包异常：${errorMessage ?? '载入失败'}`;
+    return;
+  }
+  if (state.buildState === 'loading') {
+    el.className = 'pack-status sample';
+    text.textContent = '正在构建图集…';
+    return;
+  }
+  if (state.activePack && state.buildState === 'pack') {
+    const d = state.atlas?.diagnostics;
+    const contam = d ? d.contamination.reduce((s, c) => s + c.contaminated, 0) : 0;
+    el.className = 'pack-status pack';
+    text.textContent = `素材包 ${state.activePack.id} · ${state.items.length} 块 · 安全 L${d?.safeLod ?? '?'} · 反例污染探针 ${contam} · 运行正常`;
+    return;
+  }
+  el.className = 'pack-status sample';
+  const d = state.atlas?.diagnostics;
+  text.textContent = d
+    ? `内置示例 · ${state.items.length} 块 · 安全 L${d.safeLod} · 运行正常`
+    : '未载入素材包 · 当前为内置示例';
+}
+
+// Anomaly banner: names the atlas-neighbourhood and sampling-pollution
+// abnormalities measured from real pixels, so the run state stays visible.
+function renderAnomalyBanner() {
+  const banner = $('#anomaly-banner');
+  if (!state.atlas) {
+    banner.hidden = true;
+    return;
+  }
+  const list = state.atlas.diagnostics.contamination;
+  const bad = list.filter((c) => c.contaminated > 0);
+  banner.hidden = false;
+  if (!bad.length) {
+    banner.className = 'anomaly-banner clean';
+    banner.innerHTML = '<strong>无采样污染异常</strong> · 当前布局下整页滤波反例未在核心探针测得串色（边缘扩色带仍可在边界剖面查看）。';
+    return;
+  }
+  const worst = bad.reduce((m, c) => (c.maxRgb > m.maxRgb ? c : m), bad[0]);
+  banner.className = 'anomaly-banner';
+  banner.innerHTML =
+    `<strong>检出 ${bad.length} 个图块的图集邻区 / 采样污染异常</strong><br>` +
+    `最严重：${worst.id}，预乘 ΔRGB ${worst.maxRgb.toFixed(0)}、Δα ${worst.maxA.toFixed(0)}，` +
+    `${worst.contaminated}/${worst.total} 个探针越界。守护链逐块 mip 不受影响，差异见下方三栏拼接与边界剖面。`;
 }
 
 function newItemId(base, existing) {
@@ -833,8 +953,10 @@ async function rebuild({ silent = false } = {}) {
     renderAtlasCanvas();
     renderSelectedPanel();
     renderContamTable();
+    renderAnomalyBanner();
     renderDiagnostics();
     updateTopStats();
+    renderPackStatus();
     const slider = $('#preview-level');
     const tile = state.atlas.tiles.find((t) => t.id === state.selectedId);
     slider.max = String((tile?.levels.filter((l) => l.x !== null).length ?? 1) - 1);
@@ -1002,31 +1124,52 @@ function bindUi() {
       }
     }
     e.target.value = '';
-    void rebuild();
+    state.activePack = null;
+    state.buildState = 'sample';
+    void rebuild().then(() => renderPackStatus());
   });
   $('#btn-reset').addEventListener('click', async () => {
     try {
       state.items = await loadSampleItems();
+      state.activePack = null;
+      state.buildState = 'idle';
+      state.options = { padding: 16, pageLimit: 1024, budgetBytes: 16 * 1048576, allowRotation: true };
+      syncOptionControls();
       state.selectedId = state.items[0].id;
       await rebuild();
+      renderPackStatus();
     } catch (err) {
       toast(err.message, true);
     }
   });
 
+  $('#btn-load-pack').addEventListener('click', () => loadDemoPack());
+
+  // Any manual parameter change means the build is no longer the verbatim
+  // saved pack: reflect that in the run-status strip instead of mislabelling.
+  const markCustom = () => {
+    if (state.activePack) {
+      state.activePack = null;
+      state.buildState = 'sample';
+    }
+  };
   $('#opt-padding').addEventListener('change', (e) => {
+    markCustom();
     state.options.padding = Number(e.target.value);
     rebuild();
   });
   $('#opt-pagelimit').addEventListener('change', (e) => {
+    markCustom();
     state.options.pageLimit = Number(e.target.value);
     rebuild();
   });
   $('#opt-budget').addEventListener('change', (e) => {
+    markCustom();
     state.options.budgetBytes = Number(e.target.value) * 1048576;
     rebuild();
   });
   $('#opt-rotate').addEventListener('change', (e) => {
+    markCustom();
     state.options.allowRotation = e.target.checked;
     rebuild();
   });
@@ -1222,13 +1365,18 @@ async function boot() {
   }
   ensureRenderer();
   await rebuild({ silent: true });
+  renderPackStatus();
   const note = $('#atlas-note');
   if (note && state.atlas) {
     note.textContent += ' 所有层级均由图集核心逐块生成。';
   }
 }
 
-boot();
+// Auto-boot only in a real browser window; headless tests import the module
+// and drive window.__atlasStudio against their own DOM/fetch stubs.
+if (typeof window !== 'undefined' && !window.__ATLAS_SKIP_BOOT__) {
+  boot();
+}
 
 // Expose a tiny, honest API for automated UI checks. Everything routes through
 // the same functions the buttons use.
@@ -1236,6 +1384,14 @@ window.__atlasStudio = {
   state,
   rebuild,
   select: (id) => selectTile(id, true),
+  loadDemoPack,
+  packStatus: () => ({
+    className: $('#pack-status').className,
+    text: $('#pack-status-text').textContent,
+    bannerHidden: $('#anomaly-banner').hidden,
+    bannerText: $('#anomaly-banner').textContent.replace(/\s+/g, ' ').trim(),
+    bannerHtml: $('#anomaly-banner').innerHTML.replace(/\s+/g, ' ').trim(),
+  }),
   setDistance: (d) => { if (renderer) { renderer.camera.distance = d; renderer.dirty = true; } },
   focus: (id) => focusWallOnTile(id),
   setMode: (m) => { state.viewMode = m; $$('[data-mode]').forEach((b) => b.classList.toggle('active', Number(b.dataset.mode) === m)); applyRendererParams(); },
